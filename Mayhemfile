@@ -1,0 +1,8 @@
+image: ghcr.io/ennamarie19/pdfalto-fuzz:latest
+project: pdfalto
+target: pdfalto-fuzz
+tests:
+    - file://corpus
+
+cmds:
+    - cmd: /pdfalto @@
