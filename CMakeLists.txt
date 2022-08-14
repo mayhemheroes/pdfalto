@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_EXE_LINKER_FLAGS "-no-pie")
 set(CMAKE_BUILD_TYPE "Release")
 
-
 #--- look for fontconfig
 if (NOT NO_FONTCONFIG)
   find_library(FONTCONFIG_LIBRARY
@@ -143,4 +142,3 @@ target_include_directories(pdfalto
         PUBLIC ${XPDF_BUILD_DIR}
         PUBLIC ${ICU_PATH}/common
         )
-set(CMAKE_REQUIRED_INCLUDES "/usr/local/include" "/usr/include")
