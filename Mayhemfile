@@ -1,7 +1,6 @@
-image: ghcr.io/ennamarie19/pdfalto-fuzz:latest
 project: pdfalto
 target: pdfalto-fuzz
-tests:
+testsuite:
     - file://corpus
 
 cmds:
