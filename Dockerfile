@@ -8,8 +8,6 @@ RUN apt-get update && \
 ##ADD source code to the build stage
 ADD . /pdfalto
 WORKDIR /pdfalto
-RUN rm xpdf-4.03 || true
-RUN git submodule update --init --recursive
 RUN ./install_deps.sh
 
 
