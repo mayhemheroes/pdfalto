@@ -8,7 +8,7 @@ RUN apt-get update && \
 ##ADD source code to the build stage
 ADD . /pdfalto
 WORKDIR /pdfalto
-RUN git submodule update --recursive --remote
+RUN git submodule update --init --force --remote
 RUN ./install_deps.sh
 
 
