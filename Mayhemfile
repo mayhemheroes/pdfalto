@@ -1,0 +1,7 @@
+project: pdfalto
+target: pdfalto-fuzz
+testsuite:
+    - file://corpus
+
+cmds:
+    - cmd: /pdfalto @@
