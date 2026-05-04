@@ -1,5 +1,5 @@
 #Build Stage
-FROM --platform=linux/amd64 ubuntu:20.04 as builder
+FROM --platform=linux/amd64 ubuntu:22.04 as builder
 
 ##Install Build Dependencies
 RUN apt-get update && \
@@ -18,7 +18,7 @@ WORKDIR build
 RUN cmake ..
 RUN make -j$(nproc)
 
-FROM --platform=linux/amd64 ubuntu:20.04
+FROM --platform=linux/amd64 ubuntu:22.04
 RUN apt-get update && \
         DEBIAN_FRONTEND=noninteractive apt-get install -y libfontconfig1 libfreetype6 libexpat1 libuuid1 libpng16-16 zlib1g
 COPY --from=builder /pdfalto/build/pdfalto /pdfalto
