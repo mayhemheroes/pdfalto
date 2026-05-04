@@ -8,7 +8,7 @@ RUN apt-get update && \
 ##ADD source code to the build stage
 ADD . /pdfalto
 WORKDIR /pdfalto
-RUN git submodule update --init --recursive
+RUN git config --global url."https://github.com/".insteadOf "git@github.com:" && git submodule update --init --recursive
 RUN ./install_deps.sh
 
 
