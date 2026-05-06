@@ -116,7 +116,7 @@ set(ICUUC_LIBRARY ${ICU_SUBDIR}/${OSSUFFIX}/${ARCHSUFFIX}/libicuuc.a)
 set(ICUDATA_LIBRARY ${ICU_SUBDIR}/${OSSUFFIX}/${ARCHSUFFIX}/libicudata.a)
 
 
-set(XPDF_BUILD_DIR ${XPDF_SUBDIR}/build)
+set(XPDF_BUILD_DIR ${CMAKE_BINARY_DIR}/xpdf-4.03)
 
 add_subdirectory(${XPDF_SUBDIR})
 

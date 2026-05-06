@@ -9,10 +9,8 @@ RUN apt-get update && \
 ADD . /pdfalto
 WORKDIR /pdfalto
 RUN git config --global url."https://github.com/".insteadOf "git@github.com:" && git submodule update --init --recursive
-RUN ./install_deps.sh
 
-
-##Build
+##Build (all pre-built libraries are already in the repo under libs/)
 RUN mkdir -p build
 WORKDIR build
 RUN cmake ..
