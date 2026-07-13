@@ -1,0 +1,11 @@
+project: pdfalto
+target: pdfalto-fuzz
+
+# ASan defaults (detect_leaks=0 — allocate-and-exit batch converter) are baked
+# into the binary via mayhem/asan_default_options.c; ASan + UBSan stay halting.
+cmds:
+  - cmd: /mayhem/build/pdfalto @@ /tmp/out.xml
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pdfalto-fuzz/testsuite
